@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class task3 {
+public class Task3 {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
@@ -12,9 +12,10 @@ public class task3 {
         int rainfallMax = 0;
 
         System.out.print("Введите количество осадков за каждый день: ");
+
         for (int i = 1; i <= daysAll; i++) {
             int rainfallDay = in.nextInt();
-            rainfallMax = isRainfallMax(rainfallDay);
+            rainfallMax = funcRainfallMax(rainfallDay);
             rainfallSum += rainfallDay;
         }
         int rainfallMean = rainfallSum / daysAll;
@@ -26,7 +27,7 @@ public class task3 {
 
     }
 
-    private static int isRainfallMax(int rainfallDay) {
+    private static int funcRainfallMax(int rainfallDay) {
         int rainfallMax = 0;
         if (rainfallMax <= rainfallDay) {
             rainfallMax = rainfallDay;
