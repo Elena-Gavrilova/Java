@@ -19,41 +19,37 @@ public class task2 {
         int areaHome1 = isArea(a, b);
         int areaHome2 = isArea(c, d);
 
-        if (isEqual(areaPlace, areaHome1) && isEqual(areaPlace, areaHome2))
-        {
-            if (a <= e && b <= f)
-            {
+        if (isCompare(areaPlace, areaHome1) && isCompare(areaPlace, areaHome2)) {
+            if (a <= e && b <= f) {
                 int areaRemaining = areaPlace - areaHome1;
-                if (isEqual(areaRemaining, areaHome2))
-                {
+                if (isCompare(areaRemaining, areaHome2)) {
                     int eRemaining = e - a;
                     int fRemeining = f - b;
-                    if (c < eRemaining && d < f || d < fRemeining && c < e)
-                    {
+                    if (c < eRemaining && d < f || d < fRemeining && c < e) {
                         System.out.println("Дома поместятся");
-                    }else {
+                    } else {
                         System.out.println("Второй дом не поместился");
                     }
 
-                }else {
+                } else {
                     System.out.println("Поместиться только один дом (первый)");
                 }
 
-            } else{
+            } else {
                 System.out.println("Первый дом не поместился");
             }
-        }else{
-                System.out.println("Не поместилось оба дома");
-            }
-
+        } else {
+            System.out.println("Не поместилось оба дома");
         }
 
-        private static int isArea ( int a, int b){
-            int s = a * b;
-            return s;
-        }
-
-        private static boolean isEqual ( int value1, int value2){
-            return value1 >= value2;
-        }
     }
+
+    private static int isArea(int a, int b) {
+        int s = a * b;
+        return s;
+    }
+
+    private static boolean isCompare(int value1, int value2) {
+        return value1 >= value2;
+    }
+}

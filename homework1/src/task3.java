@@ -10,22 +10,20 @@ public class task3 {
         double c = in.nextDouble();
         System.out.printf("Решить квадратное уравнение: %sx^2+%sx+%s=0\n", a, b, c);
 
-        double D = discriminant(a, b, c);
-        System.out.println("D=" + D);
+        double discriminant = discriminant(a, b, c);
+        System.out.println("D=" + discriminant);
 
-        if (isPositive(D)) {
-            isRootsEquation(a, b, c);
-        } else if (isZero(D)) {
-            System.out.println("D=0");
-        } else {
-            System.out.println("D<0");
-        } ;
+        if (isPositive(discriminant)) {
+            rootsEquation(a, b, c);
+        } else if (isZero(discriminant)) {
+            rootEquation(a,b);
+        };
 
     }
 
     private static double discriminant(double a, double b, double c) {
-        double d = Math.pow(b, 2) - 4 * a * c;
-        return d;
+        return Math.pow(b, 2) - 4 * a * c;
+
     }
 
     private static boolean isPositive(double d) {
@@ -37,11 +35,16 @@ public class task3 {
     }
 
 
-    private static void isRootsEquation(double a, double b, double c) {
-        double x1 = (-b + Math.sqrt(discriminant(a, b, c))) / 2 * a;
-        double x2 = (-b - Math.sqrt(discriminant(a, b, c))) / 2 * a;
+    private static void rootsEquation(double a, double b, double c) {
+        double d=discriminant(a,b,c);
+        double x1 = (-b + Math.sqrt(d)) / 2 * a;
+        double x2 = (-b - Math.sqrt(d)) / 2 * a;
         System.out.printf("Корни уравнения: x1=%s; x2=%s\n", x1, x2);
     }
 
+    private static void rootEquation(double a, double b) {
+        double x1 = -b  / 2 * a;
+        System.out.printf("Корень уравнения: x1=%s\n", x1);
+    }
 
 }
