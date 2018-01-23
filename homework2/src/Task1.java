@@ -8,6 +8,12 @@ public class Task1 {
         System.out.print("Введите целое число : ");
         int number = in.nextInt();
 
+        int numberSumRest = getNumberSumRest(number);
+
+        System.out.println("Сумма цифр введенного числа: "+numberSumRest);
+    }
+
+    private static int getNumberSumRest(int number) {
         int numberSumRest=0;
 
         while (number!=0){
@@ -15,7 +21,6 @@ public class Task1 {
             number= number/10;
             numberSumRest+=numberRest;
         }
-
-        System.out.println("Сумма цифр введенного числа: "+numberSumRest);
+        return numberSumRest;
     }
 }

@@ -8,8 +8,9 @@ public class Task3 {
         System.out.print("Введите количество дней: ");
         int daysAll = in.nextInt();
 
-        int rainfallSum = 0;
         int rainfallMax = 0;
+        int rainfallSum = 0;
+
 
         System.out.print("Введите количество осадков за каждый день: ");
 
