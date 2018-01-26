@@ -17,11 +17,11 @@ public class Task2 {
         Matcher matcher = pattern.matcher(value);
         while (matcher.find()) {
             String result = matcher.group();
-            getArabicNumber(result);
+            getArabicNumbers(result);
         }
     }
 
-    private static void getArabicNumber(String value) {
+    private static void getArabicNumbers(String value) {
         if (value.length() == 1) {
             value = changeRomanNumbersInArabic(value);
             System.out.println(value);
