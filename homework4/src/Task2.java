@@ -11,18 +11,17 @@ public class Task2 {
 
     }
 
-
     private static void getNumbersRoman(String value) {
         String regex = "[IVXLCDM](\\w*)";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(value);
         while (matcher.find()) {
             String result = matcher.group();
-            getArabicNumbers(result);
+            getArabicNumber(result);
         }
     }
 
-    private static void getArabicNumbers(String value) {
+    private static void getArabicNumber(String value) {
         if (value.length() == 1) {
             value = changeRomanNumbersInArabic(value);
             System.out.println(value);
