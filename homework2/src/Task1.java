@@ -14,6 +14,7 @@ public class Task1 {
     }
 
     private static int getNumberSumRest(int number) {
+
         int numberSumRest=0;
 
         while (number!=0){

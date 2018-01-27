@@ -15,12 +15,15 @@ public class Task3 {
         System.out.print("Введите количество осадков за каждый день: ");
 
         for (int i = 1; i <= daysAll; i++) {
+
             int rainfallDay = in.nextInt();
-            rainfallMax = funcRainfallMax(rainfallDay);
+
+            rainfallMax = funcRainfallMax(rainfallDay, rainfallMax);
             rainfallSum += rainfallDay;
         }
-        int rainfallMean = rainfallSum / daysAll;
 
+        int rainfallMean = rainfallSum / daysAll;
+        System.out.println("\n");
         System.out.println("а. Количество дней: " + daysAll);
         System.out.println("b. Сумма осадков за этот период: "+rainfallSum);
         System.out.println("c. Среднее количество осадков за этот период: "+rainfallMean);
@@ -28,11 +31,12 @@ public class Task3 {
 
     }
 
-    private static int funcRainfallMax(int rainfallDay) {
-        int rainfallMax = 0;
-        if (rainfallMax <= rainfallDay) {
+    private static int funcRainfallMax(int rainfallDay, int rainfallMax) {
+
+        if (rainfallMax < rainfallDay) {
             rainfallMax = rainfallDay;
         }
+
         return rainfallMax;
     }
 }
