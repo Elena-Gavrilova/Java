@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Task3 {
+
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
@@ -23,6 +24,7 @@ public class Task3 {
         }
 
         int rainfallMean = rainfallSum / daysAll;
+
         System.out.println("\n");
         System.out.println("а. Количество дней: " + daysAll);
         System.out.println("b. Сумма осадков за этот период: "+rainfallSum);
