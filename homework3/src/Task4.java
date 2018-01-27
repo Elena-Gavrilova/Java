@@ -36,6 +36,7 @@ public class Task4 {
                 System.arraycopy(array2D[1], 0, array1D, lengthArray2D1, lengthArray2D2);
             }
         }
+
         return array1D;
     }
 
@@ -53,7 +54,6 @@ public class Task4 {
         }
 
         int[][] array2D = {array1, array2};
-
 
         return array2D;
     }

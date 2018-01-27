@@ -51,6 +51,7 @@ public class Task3 {
             }
 
         }
+
         for (int i = array2.length * 2; i < array3.length; i++) {
 
             array3[i] = array1[i - array2.length];

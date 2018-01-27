@@ -35,9 +35,11 @@ public class Task1 {
     }
 
     private static int[] shiftArrayRight(int[] array, int numberOfShifts) {
+
         for (int i = 1; i <= numberOfShifts; i++) {
             array = shiftArrayRightOnce(array);
         }
+
         return array;
     }
 
