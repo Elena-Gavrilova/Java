@@ -2,8 +2,8 @@ package figure;
 
 
 public class Angle {
-    double numerator;
-    double denominator;
+    private double numerator;
+    private double denominator;
 
     public Angle(double numerator, double denominator) {
         if (numerator % Math.PI == 0) {

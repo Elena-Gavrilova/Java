@@ -6,7 +6,6 @@ public class Triangle extends Figure implements Polygon {
     private double side2;
     private double side3;
 
-
     public Triangle(double side1, double side2, double side3, Color color) {
         super(side1, color);
         if (ShapeUtils.testTriangle(side1, side2, side3)) {
@@ -15,7 +14,6 @@ public class Triangle extends Figure implements Polygon {
         }
 
     }
-
 
     @Override
     public double area() {

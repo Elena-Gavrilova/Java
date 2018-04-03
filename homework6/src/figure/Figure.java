@@ -1,10 +1,8 @@
 package figure;
 
 public class Figure implements GeometricalFigure {
-
     private double side;
     private Color color;
-
 
     public Figure(double side, Color color) {
         this.color = color;

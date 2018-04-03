@@ -1,9 +1,7 @@
 package Utils;
 
 
-import figure.Figure;
 import figure.Parallelogram;
-import figure.Triangle;
 
 
 public final class ShapeUtils {

@@ -2,7 +2,6 @@ import Utils.ShapeUtils;
 import figure.*;
 
 public class FigureDemo {
-
     public static void main(String[] args) {
 
         Triangle triangle = new Triangle(3, 4, 5, Color.BLUE);
